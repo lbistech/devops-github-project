@@ -1,0 +1,20 @@
+'''''''''''''''''''''''
+Elasticache Redis
+1) Create Redis clustor
+2) Create EC2 instanceSeparate security group for both3) Copy Elasticache endpoint4) SSH to EC2 and perform following steps
+- sudo yum install gcc -y
+- Install Redis clustor:
+- wget http://download.redis.io/redis-stable.tar.gz
+- tar xvzf redis-stable.tar.gz
+- cd redis-stable
+- make
+- Once completed, connect your Redis cluster
+- src/redis-cli -c -h myredis-server.3iljmz.ng.0001.euw2.cache.amazonaws.com -p 6379
+- Test the ElastiCache cluster by running sample commands
+- set a "hello"
+get a
+- set b "helloagain" EX 10
+get b (Can be accessed till 10 seconds then result will be Nil)
+
+These are the steps which I did to create Redis clustor and test the connection
+'''''''''''''''''''''''
